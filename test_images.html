@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        .test-image {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1.5px solid #ffe066;
+            background: #fffbe6;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Path Test</h1>
+    
+    <h2>Testing direct path:</h2>
+    <img src="Images/1631670206487203840.jpg" alt="Test 1" class="test-image" 
+         onerror="console.error('Failed to load:', this.src)" 
+         onload="console.log('Successfully loaded:', this.src)">
+    
+    <h2>Testing relative path:</h2>
+    <img src="./Images/1631670206487203840.jpg" alt="Test 2" class="test-image"
+         onerror="console.error('Failed to load:', this.src)" 
+         onload="console.log('Successfully loaded:', this.src)">
+    
+    <h2>Testing absolute path:</h2>
+    <img src="/Images/1631670206487203840.jpg" alt="Test 3" class="test-image"
+         onerror="console.error('Failed to load:', this.src)" 
+         onload="console.log('Successfully loaded:', this.src)">
+    
+    <script>
+        console.log('Testing image paths...');
+    </script>
+</body>
+</html> 
