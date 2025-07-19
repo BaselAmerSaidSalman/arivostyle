@@ -1,0 +1,319 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+body, html {
+    overflow-x: hidden;
+}
+
+/* ################################################################################################################ */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+    position: fixed;
+    top: 4em;
+    right: 2.3em;
+}
+
+.mobile-menu-btn span {
+    width: 30px;
+    height: 3px;
+    background: grey;
+    margin: 4px 0;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    color: #0a0a0a;
+    z-index: 1050;
+    transition: right 0.4s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    padding: 20px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.mobile-menu-links, .mobile-menu-icons {
+    padding: 15px;
+}
+
+.mobile-menu-links a,
+.mobile-menu-icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.mobile-menu-links a:hover,
+.mobile-menu-icons a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+/* ################################################################################################################ */
+
+header {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+}
+.header {
+    transition: all 0.5s ease;
+    background-color: #ffffff;
+    color: #0a0a0a;    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+header p:first-child {
+    color: #ffcc00;
+}
+.header_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 2em;
+}
+.header_header img{
+    width: 6em;
+    height: 6em;
+    position: fixed;
+    z-index: 999;
+    top: 3em;
+    left: 2em;
+    right: 0;
+}
+.header_icons_right{
+    position: fixed;
+    right: 2em;
+    z-index: 999;
+}
+.header_icons_right a{
+    text-decoration: none;
+    color: #d6b017;
+    margin: 0 0.5em;
+    transition: all 0.3s ease;
+}
+.header_icons_right a:hover{
+    color: #ffcc00;
+}
+.header_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header_nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+nav a:first-child {
+    text-decoration: none;
+}
+nav h1{
+    font-size: 1.5em;
+    margin: 1em 0 0 0;
+    color: #e9e0e0;
+}
+.header_nav ul li{
+    margin: 0 1.5em 0 0;
+    font-size: 1.1em;
+}
+.header_nav ul li a{
+    text-decoration: none;
+    color: rgb(95, 88, 88);
+    transition: color 0.3s ease;
+}
+.link_active {
+    color: #ffcc00 !important;
+}
+
+
+.best_sellers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.best_sellers pre {
+    font-size: 5em;
+    font-weight: bold;
+    color: #333;
+}
+.best_sellers .best_sellers_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 0 2em;
+    margin-bottom: 2.5em;
+}
+.best_sellers .best_sellers_items .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s all ease;
+}
+.best_sellers .best_sellers_items .item:hover {
+    transform: scale(1.05);
+}
+.best_sellers .best_sellers_items .item img {
+    width: 30vw;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 3em;
+    margin-bottom: 1em;
+}
+.best_sellers .best_sellers_items .item h3{
+    width: 30vw;
+}
+.best_sellers a{
+    text-decoration: none;
+    color: #0a0a0a;
+}
+
+footer {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    height: 100%;
+    width: 100vw;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_content {
+    display: flex;
+    flex-direction: row;
+}
+.footer_links {
+    margin-right: 4em;
+}
+.footer_links h3, .footer_contact h3 {
+    margin-bottom: 0;
+}
+.footer_links ul, .footer_contact p {
+    margin: 0.5em 0 1.5em 0;
+}
+.footer_links ul li a, .footer_contact a {
+    text-decoration: none;
+    color: #ffcc00;
+    transition: 0.3s all ease;
+}
+.footer_links ul li a:hover, .footer_contact a:hover {
+    color: #9a7d0a;
+}
+
+@media screen and (max-width: 1100px) {
+    body{
+        overflow-x: hidden;
+        font-size: 15px;
+    }
+
+/* ################################################################################################################ */
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .header_nav, .header_icons_right {
+        display: none;
+    }
+/* ################################################################################################################ */
+
+    #navbar h1, .header_icons_right {
+        display: none;
+    }
+    #navbar h1{
+        display: flex !important;
+        width: 100vw !important;
+        margin: -0.8em auto 0 auto !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    .header_nav{
+        position: fixed;
+        right: 0.5em;
+        top: 3.5em;
+        z-index: 999;
+    }
+    .header_header {
+        height: 10vh !important;
+    }
+    .header_header img {
+        width: 4em;
+        height: 4em;
+    }
+    .header_nav ul li {
+        margin: 0 1em 0 0;
+    }
+
+    .best_sellers pre {
+        margin-top: 0;
+        margin-bottom: 1em;
+        font-size: 3em;
+    }
+    .best_sellers .best_sellers_items .item img{
+        width: 80vw;
+        height: auto;
+    }
+    .item:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+    .best_sellers .best_sellers_items .item h3{
+        width: 80vw;
+        text-align: center;
+        text-decoration: none;
+        color: #0a0a0a;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-menu {
+        width: 100%;
+    }
+}
